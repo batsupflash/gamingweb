@@ -1,0 +1,10 @@
+body{
+  background-color: white;
+}
+.card-game-type{
+  min-height: 502px !important;
+}
+.card-game-img{
+  object-fit: cover;
+  height: 20vw;
+}
