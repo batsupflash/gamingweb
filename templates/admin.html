@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Admin
+{% endblock %}
+
+{% block page_content %}
+
+<div class="container">
+  <table class="table table-inverse">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Thể loại</th>
+          <th>Mô tả</th>
+          <th>Ảnh minh hoạ</th>
+          <th>Thao tác</th>
+          <th>
+            <a href="#"></a>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+
+          </th>
+
+        </tr>
+        <!--  --><!-- TODO: ADD HEADERS -->
+      </thead>
+
+      <tbody>
+
+        {% for the_game in the_games %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ the_game.name }}</td>
+            <td>{{ the_game.description }}</td>
+            <td>
+               <a href="{{ the_game.image }}" target="_blank" >Image link</a>
+             </td>
+             <td>
+               <a href="/admin/edit_game/{{ the_game.id }}">
+                 <i class="fa fa-pencil" aria-hidden="true"></i>
+
+               </a>
+               <a href="/admin/delete_game/{{ the_game.id }}">
+                 <i class="fa fa-trash" aria-hidden="true"></i>
+
+               </a>
+
+             </td>
+          </tr>
+        {% endfor %}
+
+      </tbody>
+  </table>
+
+</div>
+
+{% endblock %}

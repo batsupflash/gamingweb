@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block page_title %}
+Detail {{ the_game["name"] }}
+{% endblock %}
+
+
+{% block page_content %}
+<h2 class="jumbotron display-3 d-none d-md-block">{{ the_game["name"] }}</h2>
+<h3 class=" d-md-none">{{ the_game["name"] }}</h3>
+<div class="container">
+  <div class="card bg-dark">
+    <div class="card-body">
+      <img src="{{ the_game["image_detail"] }}" class="card-img-detail" alt="Ảnh game">
+      <p class="card-text text-white">{{ the_game["description_detail"] }}</p>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
